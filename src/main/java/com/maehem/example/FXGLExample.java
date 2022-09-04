@@ -19,14 +19,20 @@ import javafx.scene.text.Text;
 public class FXGLExample extends GameApplication {
 
     @Override
-    protected void initSettings(GameSettings settings) { }
+    protected void initSettings(GameSettings settings) {}
 
     @Override
     protected void initUI() {
+        // Now that Screen is configured, let's probe the bounds
+        // and set the Stage size to match our LCD screen.
+        FXGL.getExecutor().startAsyncFX(() -> {
+            var bounds = Screen.getPrimary().getBounds();
+
+            FXGL.getPrimaryStage().setWidth(bounds.getWidth());
+            FXGL.getPrimaryStage().setHeight(bounds.getHeight());
+        });
+
         Text uiText = new Text("Hello FXGL World");
-
-        //var bounds = Screen.getPrimary().getBounds();
-
         FXGL.addUINode(uiText, 100, 100);
     }
 
