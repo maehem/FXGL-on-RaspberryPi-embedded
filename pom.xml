@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.maehem</groupId>
-    <artifactId>maehem-example-javafx</artifactId>
-    <name>Sample JavaFX/RaspberryPi embedded project</name>
-    <description>RaspberryPi Embedded Example JavaFX Code</description>
+    <artifactId>maehem-example-fxgl</artifactId>
+    <name>Sample FXGL/RaspberryPi embedded project</name>
+    <description>RaspberryPi Embedded Example FXGL Code</description>
     <version>0.0.1</version>
 
     <!-- BUILD PROPERTIES -->

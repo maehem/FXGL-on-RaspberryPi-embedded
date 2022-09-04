@@ -10,6 +10,7 @@ package com.maehem.example;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.dsl.FXGL;
+import javafx.stage.Screen;
 import javafx.scene.text.Text;
 
 /**
@@ -24,7 +25,9 @@ public class FXGLExample extends GameApplication {
     protected void initUI() {
         Text uiText = new Text("Hello FXGL World");
 
-        FXGL.addUINode(uiText, 300, 300);
+        //var bounds = Screen.getPrimary().getBounds();
+
+        FXGL.addUINode(uiText, 100, 100);
     }
 
     public static void main(String[] args) {
